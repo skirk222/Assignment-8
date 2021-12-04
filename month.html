@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Month PUI Assignment 8"/>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+        <title>Assignment 8</title>
+    </head>
+    <body>
+        <header>
+            <div class="nav">
+                <div class="top-left"><b>IxPlan</b></div>
+                <div class="nav-items">
+                    <h3 class="top-right" id="light" onclick="switchModeLight()">Light Mode</h3>
+                    <!-- <h3 class="top-right" id="dark" onclick="switchModeDark()">Dark Mode</h3> -->
+                    <h3 class="top-right">Profile</h3>
+                    <h3 class="top-right">Settings</h3>
+                    <h3 class="top-right" a href="year.html">Year</h3>
+                    <h3 class="top-right" a href="month.html">Month</h3>
+                    <h3 class="top-right" a href="week.html">Week</h3>
+                </div>
+            </div>
+        </header>
+
+        <div class="flex-box">
+                <!-- <div class="time" id="past">Past</div> -->
+                <!-- <section class="section current-month">
+                    <h1>January</h1>
+                </section> -->
+                <!-- <div class="time" id="upcoming">Upcoming</div> -->
+        </div>
+
+        <div class="slidewrapper">
+            <div class="slides">
+                <div class="monthwrapper">
+                    <h1>November</h1>
+                    <div class="event-options">
+                        <label class="listed-item" id="date">Date: </label>
+                        <select name="date" id="date-dropdown" placeholder="Select Date">
+                            <option value="Nov_1_2021">Nov. 1 2021</option>
+                            <option value="Nov_2_2021">Nov. 2 2021</option>
+                            <option value="Nov_3_2021">Nov. 3 2021</option>
+                            <option value="Nov_4_2021">Nov. 4 2021</option>
+                            <option value="Nov_5_2021">Nov. 5 2021</option>
+                            <option value="Nov_6_2021">Nov. 6 2021</option>
+                            <option value="Nov_7_2021">Nov. 7 2021</option>
+                            <option value="Nov_8_2021">Nov. 8 2021</option>
+                            <option value="Nov_9_2021">Nov. 9 2021</option>
+                            <option value="Nov_10_2021">Nov. 10 2021</option>
+                            <option value="Nov_11_2021">Nov. 11 2021</option>
+                            <option value="Nov_12_2021">Nov. 12 2021</option>
+                            <option value="Nov_13_2021">Nov. 13 2021</option>
+                            <option value="Nov_14_2021">Nov. 14 2021</option>
+                            <option value="Nov_15_2021">Nov. 15 2021</option>
+                            <option value="Nov_16_2021">Nov. 16 2021</option>
+                            <option value="Nov_17_2021">Nov. 17 2021</option>
+                            <option value="Nov_18_2021">Nov. 18 2021</option>
+                            <option value="Nov_19_2021">Nov. 19 2021</option>
+                            <option value="Nov_20_2021">Nov. 20 2021</option>
+                            <option value="Nov_21_2021">Nov. 21 2021</option>
+                            <option value="Nov_22_2021">Nov. 22 2021</option>
+                            <option value="Nov_23_2021">Nov. 23 2021</option>
+                            <option value="Nov_24_2021">Nov. 24 2021</option>
+                            <option value="Nov_25_2021">Nov. 25 2021</option>
+                            <option value="Nov_26_2021">Nov. 26 2021</option>
+                            <option value="Nov_27_2021">Nov. 27 2021</option>
+                            <option value="Nov_28_2021">Nov. 28 2021</option>
+                            <option value="Nov_29_2021">Nov. 29 2021</option>
+                            <option value="Nov_30_2021">Nov. 30 2021</option>
+                        </select>
+        
+                        <label class="listed-item" id="time">Time: </label>
+                           <select name="time" id="time-dropdown" placeholder="Select Time">
+                                <option value="1AM">1:00 AM</option>
+                                <option value="2AM">2:00 AM</option>
+                                <option value="3AM">3:00 AM</option>
+                                <option value="4AM">4:00 AM</option>
+                                <option value="5AM">5:00 AM</option>
+                                <option value="6AM">6:00 AM</option>
+                                <option value="7AM">7:00 AM</option>
+                                <option value="8AM">8:00 AM</option>
+                                <option value="9AM">9:00 AM</option>
+                                <option value="10AM">10:00 AM</option>
+                                <option value="11AM">11:00 AM</option>
+                                <option value="12PM">12:00 PM</option>
+                                <option value="1PM">1:00 PM</option>
+                                <option value="2PM">2:00 PM</option>
+                                <option value="3PM">3:00 PM</option>
+                                <option value="4PM">4:00 PM</option>
+                                <option value="5PM">5:00 PM</option>
+                                <option value="6PM">6:00 PM</option>
+                                <option value="7PM">7:00 PM</option>
+                                <option value="8PM">8:00 PM</option>
+                                <option value="9PM">9:00 PM</option>
+                                <option value="10PM">10:00 PM</option>
+                                <option value="11PM">11:00 PM</option>
+                                <option value="12AM">12:00 AM</option>
+                            </select>
+                            <br>
+                        <form>
+                            <label for="name">Name: </label>
+                            <input type="text" id="name" name="name"><br><br>
+                            <button type="button" id="submit" onClick="addtoCal()">Submit</button>
+                        </form>
+                    </div>
+                    <div class="cal-grid-nov">
+                        <h4 class="Sunday">Sunday</h4>
+                        <h4 class="Monday">Monday</h4>
+                        <h4 class="Tuesday">Tuesday</h4>
+                        <h4 class="Wednesday">Wednesday</h4>
+                        <h4 class="Thursday">Thursday</h4>
+                        <h4 class="Friday">Friday</h4>
+                        <h4 class="Saturday">Saturday</h4>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="week1-grid">
+                            <h5 class="1">1</h5>
+                            <div id="Nov_1_2021" value="Nov_1_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week1-grid">
+                            <h5 class="2">2</h5>
+                            <div  id="Nov_2_2021" value="Nov_2_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid"> 
+                            <h5 class="3">3</h5>
+                            <div id="Nov_3_2021" value="Nov_3_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid"> 
+                            <h5 class="4">4</h5>
+                            <div id="Nov_4_2021" value="Nov_4_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid">
+                            <h5 class="5">5</h5>
+                            <div id="Nov_5_2021" value="Nov_5_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid">
+                            <h5 class="6">6</h5>
+                            <div id="Nov_6_2021" value="Nov_6_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid">
+                            <h5 class="7">7</h5>
+                            <div id="Nov_7_2021" value="Nov_7_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid">
+                            <h5 class="8">8</h5>
+                            <div id="Nov_8_2021" value="Nov_8_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid">
+                            <h5 class="9">9</h5>
+                            <div id="Nov_9_2021" value="Nov_9_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="10">10</h5>
+                            <div id="Nov_10_2021" value="Nov_10_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="11">11</h5>
+                            <div id="Nov_11_2021" value="Nov_11_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="12">12</h5>
+                            <div id="Nov_12_2021" value="Nov_12_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="13">13</h5>
+                            <div id="Nov_13_2021" value="Nov_13_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="14">14</h5>
+                            <div id="Nov_14_2021" value="Nov_14_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="15">15</h5>
+                            <div id="Nov_15_2021" value="Nov_15_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="16">16</h5>
+                            <div id="Nov_16_2021" value="Nov_16_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="17">17</h5>
+                            <div id="Nov_17_2021" value="Nov_17_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="18">18</h5>
+                            <div id="Nov_18_2021" value="Nov_18_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="19">19</h5>
+                            <div id="Nov_19_2021" value="Nov_19_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="20">20</h5>
+                            <div id="Nov_20_2021" value="Nov_20_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="21">21</h5>
+                            <div id="Nov_21_2021" value="Nov_21_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="22">22</h5>
+                            <div id="Nov_22_2021" value="Nov_22_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="23">23</h5>
+                            <div id="Nov_23_2021" value="Nov_23_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week5-grid">
+                            <h5 class="24">24</h5>
+                            <div id="Nov_24_2021" value="Nov_24_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week5-grid">
+                            <h5 class="25">25</h5>
+                            <div id="Nov_25_2021" value="Nov_25_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week5-grid">
+                            <h5 class="26">26</h5>
+                            <div id="Nov_26_2021" value="Nov_26_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week5-grid">
+                            <h5 class="27">27</h5>
+                            <div id="Nov_27_2021" value="Nov_27_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week5-grid">
+                            <h5 class="28">28</h5>
+                            <div id="Nov_28_2021" value="Nov_28_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week5-grid">
+                            <h5 class="29">29</h5>
+                            <div id="Nov_29_2021" value="Nov_29_2021" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week5-grid">
+                            <h5 class="30">30</h5>
+                            <div id="Nov_30_2021" value="Nov_30_2021" onclick="removeFromCal()"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slides">
+                <div class="monthwrapper">
+                    <h1>December</h1>
+                    <div class="event-options">
+                        <label class="listed-item" id="date2">Date: </label>
+                        <select name="date2" id="date-dropdown2" placeholder="Select Date">
+                            <option value="Dec_1_2021">Dec. 1 2021</option>
+                            <option value="Dec_2_2021">Dec. 2 2021</option>
+                            <option value="Dec_3_2021">Dec. 3 2021</option>
+                            <option value="Dec_4_2021">Dec. 4 2021</option>
+                            <option value="Dec_5_2021">Dec. 5 2021</option>
+                            <option value="Dec_6_2021">Dec. 6 2021</option>
+                            <option value="Dec_7_2021">Dec. 7 2021</option>
+                            <option value="Dec_8_2021">Dec. 8 2021</option>
+                            <option value="Dec_9_2021">Dec. 9 2021</option>
+                            <option value="Dec_10_2021">Dec. 10 2021</option>
+                            <option value="Dec_11_2021">Dec. 11 2021</option>
+                            <option value="Dec_12_2021">Dec. 12 2021</option>
+                            <option value="Dec_13_2021">Dec. 13 2021</option>
+                            <option value="Dec_14_2021">Dec. 14 2021</option>
+                            <option value="Dec_15_2021">Dec. 15 2021</option>
+                            <option value="Dec_16_2021">Dec. 16 2021</option>
+                            <option value="Dec_17_2021">Dec. 17 2021</option>
+                            <option value="Dec_18_2021">Dec. 18 2021</option>
+                            <option value="Dec_19_2021">Dec. 19 2021</option>
+                            <option value="Dec_20_2021">Dec. 20 2021</option>
+                            <option value="Dec_21_2021">Dec. 21 2021</option>
+                            <option value="Dec_22_2021">Dec. 22 2021</option>
+                            <option value="Dec_23_2021">Dec. 23 2021</option>
+                            <option value="Dec_24_2021">Dec. 24 2021</option>
+                            <option value="Dec_25_2021">Dec. 25 2021</option>
+                            <option value="Dec_26_2021">Dec. 26 2021</option>
+                            <option value="Dec_27_2021">Dec. 27 2021</option>
+                            <option value="Dec_28_2021">Dec. 28 2021</option>
+                            <option value="Dec_29_2021">Dec. 29 2021</option>
+                            <option value="Dec_30_2021">Dec. 30 2021</option>
+                            <option value="Dec_31_2021">Dec. 31 2021</option>
+                        </select>
+        
+                        <label class="listed-item" id="time2">Time: </label>
+                           <select name="time2" id="time-dropdown2" placeholder="Select Time">
+                                <option value="1AM">1:00 AM</option>
+                                <option value="2AM">2:00 AM</option>
+                                <option value="3AM">3:00 AM</option>
+                                <option value="4AM">4:00 AM</option>
+                                <option value="5AM">5:00 AM</option>
+                                <option value="6AM">6:00 AM</option>
+                                <option value="7AM">7:00 AM</option>
+                                <option value="8AM">8:00 AM</option>
+                                <option value="9AM">9:00 AM</option>
+                                <option value="10AM">10:00 AM</option>
+                                <option value="11AM">11:00 AM</option>
+                                <option value="12PM">12:00 PM</option>
+                                <option value="1PM">1:00 PM</option>
+                                <option value="2PM">2:00 PM</option>
+                                <option value="3PM">3:00 PM</option>
+                                <option value="4PM">4:00 PM</option>
+                                <option value="5PM">5:00 PM</option>
+                                <option value="6PM">6:00 PM</option>
+                                <option value="7PM">7:00 PM</option>
+                                <option value="8PM">8:00 PM</option>
+                                <option value="9PM">9:00 PM</option>
+                                <option value="10PM">10:00 PM</option>
+                                <option value="11PM">11:00 PM</option>
+                                <option value="12AM">12:00 AM</option>
+                            </select>
+                            <br>
+                        <form>
+                            <label for="name2">Name: </label>
+                            <input type="text" id="name2" name="name2"><br><br>
+                            <button type="button" id="submit2" onClick="addtoCal2()">Submit</button>
+                        </form>
+                    </div>
+                    <div class="cal-grid-dec">
+                            <h4 class="Sunday">Sunday</h4>
+                            <h4 class="Monday">Monday</h4>
+                            <h4 class="Tuesday">Tuesday</h4>
+                            <h4 class="Wednesday">Wednesday</h4>
+                            <h4 class="Thursday">Thursday</h4>
+                            <h4 class="Friday">Friday</h4>
+                            <h4 class="Saturday">Saturday</h4>
+                            <div class="week1-grid">
+                                <h5 class="1">1</h5>
+                                <div id="Dec_1_2021" value="Dec_1_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week1-grid">
+                                <h5 class="2">2</h5>
+                                <div id="Dec_2_2021" value="Dec_2_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week1-grid">
+                                <h5 class="3">3</h5>
+                                <div id="Dec_3_2021" value="Dec_3_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week1-grid">
+                                <h5 class="4">4</h5>
+                                <div id="Dec_4_2021" value="Dec_4_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week1-grid">
+                                <h5 class="5">5</h5>
+                                <div id="Dec_5_2021" value="Dec_5_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week1-grid">
+                                <h5 class="6">6</h5>
+                                <div id="Dec_6_2021" value="Dec_6_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week1-grid">
+                                <h5 class="7">7</h5>
+                                <div id="Dec_7_2021" value="Dec_7_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week2-grid">
+                                <h5 class="8">8</h5>
+                                <div id="Dec_8_2021" value="Dec_8_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week2-grid">
+                                <h5 class="9">9</h5>
+                                <div id="Dec_9_2021" value="Dec_9_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week2-grid">
+                                <h5 class="10">10</h5>
+                                <div id="Dec_10_2021" value="Dec_10_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week2-grid">
+                                <h5 class="11">11</h5>
+                                <div id="Dec_11_2021" value="Dec_11_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week2-grid">
+                                <h5 class="12">12</h5>
+                                <div id="Dec_12_2021" value="Dec_12_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week2-grid">
+                                <h5 class="13">13</h5>
+                                <div id="Dec_13_2021" value="Dec_13_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week2-grid">
+                                <h5 class="14">14</h5>
+                                <div id="Dec_14_2021" value="Dec_14_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week3-grid">
+                                <h5 class="15">15</h5>
+                                <div id="Dec_15_2021" value="Dec_15_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week3-grid">
+                                <h5 class="16">16</h5>
+                                <div id="Dec_17_2021" value="Dec_17_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week3-grid">
+                                <h5 class="17">17</h5>
+                                <div id="Dec_17_2021" value="Dec_17_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week3-grid">
+                                <h5 class="18">18</h5>
+                                <div id="Dec_18_2021" value="Dec_18_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week3-grid">
+                                <h5 class="19">19</h5>
+                                <div id="Dec_19_2021" value="Dec_19_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week3-grid">
+                                <h5 class="20">20</h5>
+                                <div id="Dec_20_2021" value="Dec_20_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week3-grid">
+                                <h5 class="21">21</h5>
+                                <div id="Dec_21_2021" value="Dec_201_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week4-grid">
+                                <h5 class="22">22</h5>
+                                <div id="Dec_22_2021" value="Dec_22_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week4-grid">
+                                <h5 class="23">23</h5>
+                                <div id="Dec_22_2021" value="Dec_22_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week4-grid">
+                                <h5 class="24">24</h5>
+                                <div id="Dec_24_2021" value="Dec_24_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week4-grid">
+                                <h5 class="25">25</h5>
+                                <div id="Dec_25_2021" value="Dec_25_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week4-grid">
+                                <h5 class="26">26</h5>
+                                <div id="Dec_26_2021" value="Dec_26_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week4-grid">
+                                <h5 class="27">27</h5>
+                                <div id="Dec_27_2021" value="Dec_27_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week4-grid">
+                                <h5 class="28">28</h5>
+                                <div id="Dec_28_2021" value="Dec_28_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week5-grid">
+                                <h5 class="29">29</h5>
+                                <div id="Dec_29_2021" value="Dec_29_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week5-grid">
+                                <h5 class="30">30</h5>
+                                <div id="Dec_30_2021" value="Dec_30_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div class="week5-grid">
+                                <h5 class="31">31</h5>
+                                <div id="Dec_31_2021" value="Dec_31_2021" onclick="removeFromCal()"></div>
+                            </div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="slides">
+                <div class="monthwrapper">
+                    <h1>January</h1>
+                    <div class="event-options">
+                        <label class="listed-item" id="date3">Date: </label>
+                        <select name="date3" id="date-dropdown3" placeholder="Select Date">
+                            <option value="Jan_1_2022">Jan. 1 2022</option>
+                            <option value="Jan_2_2022">Jan. 2 2022</option>
+                            <option value="Jan_3_2022">Jan. 3 2022</option>
+                            <option value="Jan_4_2022">Jan. 4 2022</option>
+                            <option value="Jan_5_2022">Jan. 5 2022</option>
+                            <option value="Jan_6_2022">Jan. 6 2022</option>
+                            <option value="Jan_7_2022">Jan. 7 2022</option>
+                            <option value="Jan_8_2022">Jan. 8 2022</option>
+                            <option value="Jan_9_2022">Jan. 9 2022</option>
+                            <option value="Jan_10_2022">Jan. 10 2022</option>
+                            <option value="Jan_11_2022">Jan. 11 2022</option>
+                            <option value="Jan_12_2022">Jan. 12 2022</option>
+                            <option value="Jan_13_2022">Jan. 13 2022</option>
+                            <option value="Jan_14_2022">Jan. 14 2022</option>
+                            <option value="Jan_15_2022">Jan. 15 2022</option>
+                            <option value="Jan_16_2022">Jan. 16 2022</option>
+                            <option value="Jan_17_2022">Jan. 17 2022</option>
+                            <option value="Jan_18_2022">Jan. 18 2022</option>
+                            <option value="Jan_19_2022">Jan. 19 2022</option>
+                            <option value="Jan_20_2022">Jan. 20 2022</option>
+                            <option value="Jan_21_2022">Jan. 21 2022</option>
+                            <option value="Jan_22_2022">Jan. 22 2022</option>
+                            <option value="Jan_23_2022">Jan. 23 2022</option>
+                            <option value="Jan_24_2022">Jan. 24 2022</option>
+                            <option value="Jan_25_2022">Jan. 25 2022</option>
+                            <option value="Jan_26_2022">Jan. 26 2022</option>
+                            <option value="Jan_27_2022">Jan. 27 2022</option>
+                            <option value="Jan_28_2022">Jan. 28 2022</option>
+                            <option value="Jan_29_2022">Jan. 29 2022</option>
+                            <option value="Jan_30_2022">Jan. 30 2022</option>
+                            <option value="Jan_31_2022">Jan. 31 2022</option>
+                        </select>
+        
+                        <label class="listed-item" id="time3">Time: </label>
+                           <select name="time3" id="time-dropdown3" placeholder="Select Time">
+                                <option value="1AM">1:00 AM</option>
+                                <option value="2AM">2:00 AM</option>
+                                <option value="3AM">3:00 AM</option>
+                                <option value="4AM">4:00 AM</option>
+                                <option value="5AM">5:00 AM</option>
+                                <option value="6AM">6:00 AM</option>
+                                <option value="7AM">7:00 AM</option>
+                                <option value="8AM">8:00 AM</option>
+                                <option value="9AM">9:00 AM</option>
+                                <option value="10AM">10:00 AM</option>
+                                <option value="11AM">11:00 AM</option>
+                                <option value="12PM">12:00 PM</option>
+                                <option value="1PM">1:00 PM</option>
+                                <option value="2PM">2:00 PM</option>
+                                <option value="3PM">3:00 PM</option>
+                                <option value="4PM">4:00 PM</option>
+                                <option value="5PM">5:00 PM</option>
+                                <option value="6PM">6:00 PM</option>
+                                <option value="7PM">7:00 PM</option>
+                                <option value="8PM">8:00 PM</option>
+                                <option value="9PM">9:00 PM</option>
+                                <option value="10PM">10:00 PM</option>
+                                <option value="11PM">11:00 PM</option>
+                                <option value="12AM">12:00 AM</option>
+                            </select>
+                            <br>
+                        <form>
+                            <label for="name3">Name: </label>
+                            <input type="text" id="name3" name="name3"><br><br>
+                            <button type="button" id="submit3" onClick="addtoCal3()">Submit</button>
+                        </form>
+                    </div>
+                    <div class="cal-grid-jan">
+                        <h4 class="Sunday">Sunday</h4>
+                        <h4 class="Monday">Monday</h4>
+                        <h4 class="Tuesday">Tuesday</h4>
+                        <h4 class="Wednesday">Wednesday</h4>
+                        <h4 class="Thursday">Thursday</h4>
+                        <h4 class="Friday">Friday</h4>
+                        <h4 class="Saturday">Saturday</h4>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="week1-grid">
+                            <h5 class="1">1</h5>
+                            <div id="Jan_1_2022" value="Jan_1_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week1-grid">
+                            <h5 class="2">2</h5>
+                            <div id="Jan_2_2022" value="Jan_2_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week1-grid">
+                            <h5 class="3">3</h5>
+                            <div id="Jan_3_2022" value="Jan_3_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week1-grid">
+                            <h5 class="4">4</h5>
+                            <div id="Jan_4_2022" value="Jan_4_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week1-grid">
+                            <h5 class="5">5</h5>
+                            <div id="Jan_5_2022" value="Jan_5_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week1-grid">
+                            <h5 class="6">6</h5>
+                            <div id="Jan_6_2022" value="Jan_6_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week1-grid">
+                            <h5 class="7">7</h5>
+                            <div id="Jan_7_2022" value="Jan_7_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid">
+                            <h5 class="8">8</h5>
+                            <div id="Jan_8_2022" value="Jan_8_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid">
+                            <h5 class="9">9</h5>
+                            <div id="Jan_9_2022" value="Jan_9_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid">
+                            <h5 class="10">10</h5>
+                            <div id="Jan_10_2022" value="Jan_10_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid">
+                            <h5 class="11">11</h5>
+                            <div id="Jan_11_2022" value="Jan_11_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid">
+                            <h5 class="12">12</h5>
+                            <div id="Jan_12_2022" value="Jan_12_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid">
+                            <h5 class="13">13</h5>
+                            <div id="Jan_13_2022" value="Jan_13_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid">
+                            <h5 class="14">14</h5>
+                            <div id="Jan_14_2022" value="Jan_14_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="15">15</h5>
+                            <div id="Jan_15_2022" value="Jan_15_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="16">16</h5>
+                            <div id="Jan_17_2022" value="Jan_17_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="17">17</h5>
+                            <div id="Jan_17_2022" value="Jan_17_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="18">18</h5>
+                            <div id="Jan_18_2022" value="Jan_18_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="19">19</h5>
+                            <div id="Jan_19_2022" value="Jan_19_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="20">20</h5>
+                            <div id="Jan_20_2022" value="Jan_20_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="21">21</h5>
+                            <div id="Jan_21_2022" value="Jan_201_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="22">22</h5>
+                            <div id="Jan_22_2022" value="Jan_22_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="23">23</h5>
+                            <div id="Jan_22_2022" value="Jan_22_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="24">24</h5>
+                            <div id="Jan_24_2022" value="Jan_24_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="25">25</h5>
+                            <div id="Jan_25_2022" value="Jan_25_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="26">26</h5>
+                            <div id="Jan_26_2022" value="Jan_26_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="27">27</h5>
+                            <div id="Jan_27_2022" value="Jan_27_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="28">28</h5>
+                            <div id="Jan_28_2022" value="Jan_28_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week5-grid">
+                            <h5 class="29">29</h5>
+                            <div id="Jan_29_2022" value="Jan_29_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week5-grid">
+                            <h5 class="30">30</h5>
+                            <div id="Jan_30_2022" value="Jan_30_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week5-grid">
+                            <h5 class="31">31</h5>
+                            <div id="Jan_31_2022" value="Jan_31_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="slides">
+                <div class="monthwrapper">
+                    <h1>February</h1>
+                    <div class="event-options">
+                        <label class="listed-item" id="date4">Date: </label>
+                        <select name="date4" id="date-dropdown4" placeholder="Select Date">
+                            <option value="Feb_1_2022">Feb. 1 2022</option>
+                            <option value="Feb_2_2022">Feb. 2 2022</option>
+                            <option value="Feb_3_2022">Feb. 3 2022</option>
+                            <option value="Feb_4_2022">Feb. 4 2022</option>
+                            <option value="Feb_5_2022">Feb. 5 2022</option>
+                            <option value="Feb_6_2022">Feb. 6 2022</option>
+                            <option value="Feb_7_2022">Feb. 7 2022</option>
+                            <option value="Feb_8_2022">Feb. 8 2022</option>
+                            <option value="Feb_9_2022">Feb. 9 2022</option>
+                            <option value="Feb_10_2022">Feb. 10 2022</option>
+                            <option value="Feb_11_2022">Feb. 11 2022</option>
+                            <option value="Feb_12_2022">Feb. 12 2022</option>
+                            <option value="Feb_13_2022">Feb. 13 2022</option>
+                            <option value="Feb_14_2022">Feb. 14 2022</option>
+                            <option value="Feb_15_2022">Feb. 15 2022</option>
+                            <option value="Feb_16_2022">Feb. 16 2022</option>
+                            <option value="Feb_17_2022">Feb. 17 2022</option>
+                            <option value="Feb_18_2022">Feb. 18 2022</option>
+                            <option value="Feb_19_2022">Feb. 19 2022</option>
+                            <option value="Feb_20_2022">Feb. 20 2022</option>
+                            <option value="Feb_21_2022">Feb. 21 2022</option>
+                            <option value="Feb_22_2022">Feb. 22 2022</option>
+                            <option value="Feb_23_2022">Feb. 23 2022</option>
+                            <option value="Feb_24_2022">Feb. 24 2022</option>
+                            <option value="Feb_25_2022">Feb. 25 2022</option>
+                            <option value="Feb_26_2022">Feb. 26 2022</option>
+                            <option value="Feb_27_2022">Feb. 27 2022</option>
+                            <option value="Feb_28_2022">Feb. 28 2022</option>
+                            <option value="Feb_29_2022">Feb. 29 2022</option>
+                            <option value="Feb_30_2022">Feb. 30 2022</option>
+                            <option value="Feb_31_2022">Feb. 31 2022</option>
+                        </select>
+        
+                        <label class="listed-item" id="time4">Time: </label>
+                           <select name="time4" id="time-dropdown4" placeholder="Select Time">
+                                <option value="1AM">1:00 AM</option>
+                                <option value="2AM">2:00 AM</option>
+                                <option value="3AM">3:00 AM</option>
+                                <option value="4AM">4:00 AM</option>
+                                <option value="5AM">5:00 AM</option>
+                                <option value="6AM">6:00 AM</option>
+                                <option value="7AM">7:00 AM</option>
+                                <option value="8AM">8:00 AM</option>
+                                <option value="9AM">9:00 AM</option>
+                                <option value="10AM">10:00 AM</option>
+                                <option value="11AM">11:00 AM</option>
+                                <option value="12PM">12:00 PM</option>
+                                <option value="1PM">1:00 PM</option>
+                                <option value="2PM">2:00 PM</option>
+                                <option value="3PM">3:00 PM</option>
+                                <option value="4PM">4:00 PM</option>
+                                <option value="5PM">5:00 PM</option>
+                                <option value="6PM">6:00 PM</option>
+                                <option value="7PM">7:00 PM</option>
+                                <option value="8PM">8:00 PM</option>
+                                <option value="9PM">9:00 PM</option>
+                                <option value="10PM">10:00 PM</option>
+                                <option value="11PM">11:00 PM</option>
+                                <option value="12AM">12:00 AM</option>
+                            </select>
+                            <br>
+                        <form>
+                            <label for="name4">Name: </label>
+                            <input type="text" id="name4" name="name4"><br><br>
+                            <button type="button" id="submit4" onClick="addtoCal4()">Submit</button>
+                        </form>
+                    </div>
+                    <div class="cal-grid-feb">
+                        <h4 class="Sunday">Sunday</h4>
+                        <h4 class="Monday">Monday</h4>
+                        <h4 class="Tuesday">Tuesday</h4>
+                        <h4 class="Wednesday">Wednesday</h4>
+                        <h4 class="Thursday">Thursday</h4>
+                        <h4 class="Friday">Friday</h4>
+                        <h4 class="Saturday">Saturday</h4>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="week1-grid">
+                            <h5 class="1">1</h5>
+                            <div id="Feb_1_2022" value="Feb_1_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week1-grid">
+                            <h5 class="2">2</h5>
+                            <div  id="Feb_2_2022" value="Feb_2_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid"> 
+                            <h5 class="3">3</h5>
+                            <div id="Feb_3_2022" value="Feb_3_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid"> 
+                            <h5 class="4">4</h5>
+                            <div id="Feb_4_2022" value="Feb_4_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid">
+                            <h5 class="5">5</h5>
+                            <div id="Feb_5_2022" value="Feb_5_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid">
+                            <h5 class="6">6</h5>
+                            <div id="Feb_6_2022" value="Feb_6_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid">
+                            <h5 class="7">7</h5>
+                            <div id="Feb_7_2022" value="Feb_7_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid">
+                            <h5 class="8">8</h5>
+                            <div id="Feb_8_2022" value="Feb_8_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid">
+                            <h5 class="9">9</h5>
+                            <div id="Feb_9_2022" value="Feb_9_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="10">10</h5>
+                            <div id="Feb_10_2022" value="Feb_10_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="11">11</h5>
+                            <div id="Feb_11_2022" value="Feb_11_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="12">12</h5>
+                            <div id="Feb_12_2022" value="Feb_12_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="13">13</h5>
+                            <div id="Feb_13_2022" value="Feb_13_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="14">14</h5>
+                            <div id="Feb_14_2022" value="Feb_14_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="15">15</h5>
+                            <div id="Feb_15_2022" value="Feb_15_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="16">16</h5>
+                            <div id="Feb_16_2022" value="Feb_16_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="17">17</h5>
+                            <div id="Feb_17_2022" value="Feb_17_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="18">18</h5>
+                            <div id="Feb_18_2022" value="Feb_18_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="19">19</h5>
+                            <div id="Feb_19_2022" value="Feb_19_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="20">20</h5>
+                            <div id="Feb_20_2022" value="Feb_20_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="21">21</h5>
+                            <div id="Feb_21_2022" value="Feb_21_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="22">22</h5>
+                            <div id="Feb_22_2022" value="Feb_22_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="23">23</h5>
+                            <div id="Feb_23_2022" value="Feb_23_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="24">24</h5>
+                            <div id="Feb_24_2022" value="Feb_24_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="25">25</h5>
+                            <div id="Feb_25_2022" value="Feb_25_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="26">26</h5>
+                            <div id="Feb_26_2022" value="Feb_26_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="27">27</h5>
+                            <div id="Feb_27_2022" value="Feb_27_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="28">28</h5>
+                            <div id="Feb_28_2022" value="Feb_28_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="slides">
+                <div class="monthwrapper">
+                    <h1>March</h1>
+                    <div class="event-options">
+                        <label class="listed-item" id="date5">Date: </label>
+                        <select name="date5" id="date-dropdown5" placeholder="Select Date">
+                            <option value="Mar_1_2022">Mar. 1 2022</option>
+                            <option value="Mar_2_2022">Mar. 2 2022</option>
+                            <option value="Mar_3_2022">Mar. 3 2022</option>
+                            <option value="Mar_4_2022">Mar. 4 2022</option>
+                            <option value="Mar_5_2022">Mar. 5 2022</option>
+                            <option value="Mar_6_2022">Mar. 6 2022</option>
+                            <option value="Mar_7_2022">Mar. 7 2022</option>
+                            <option value="Mar_8_2022">Mar. 8 2022</option>
+                            <option value="Mar_9_2022">Mar. 9 2022</option>
+                            <option value="Mar_10_2022">Mar. 10 2022</option>
+                            <option value="Mar_11_2022">Mar. 11 2022</option>
+                            <option value="Mar_12_2022">Mar. 12 2022</option>
+                            <option value="Mar_13_2022">Mar. 13 2022</option>
+                            <option value="Mar_14_2022">Mar. 14 2022</option>
+                            <option value="Mar_15_2022">Mar. 15 2022</option>
+                            <option value="Mar_16_2022">Mar. 16 2022</option>
+                            <option value="Mar_17_2022">Mar. 17 2022</option>
+                            <option value="Mar_18_2022">Mar. 18 2022</option>
+                            <option value="Mar_19_2022">Mar. 19 2022</option>
+                            <option value="Mar_20_2022">Mar. 20 2022</option>
+                            <option value="Mar_21_2022">Mar. 21 2022</option>
+                            <option value="Mar_22_2022">Mar. 22 2022</option>
+                            <option value="Mar_23_2022">Mar. 23 2022</option>
+                            <option value="Mar_24_2022">Mar. 24 2022</option>
+                            <option value="Mar_25_2022">Mar. 25 2022</option>
+                            <option value="Mar_26_2022">Mar. 26 2022</option>
+                            <option value="Mar_27_2022">Mar. 27 2022</option>
+                            <option value="Mar_28_2022">Mar. 28 2022</option>
+                            <option value="Mar_29_2022">Mar. 29 2022</option>
+                            <option value="Mar_30_2022">Mar. 30 2022</option>
+                            <option value="Mar_31_2022">Mar. 31 2022</option>
+                        </select>
+        
+                        <label class="listed-item" id="time5">Time: </label>
+                           <select name="time5" id="time-dropdown5" placeholder="Select Time">
+                                <option value="1AM">1:00 AM</option>
+                                <option value="2AM">2:00 AM</option>
+                                <option value="3AM">3:00 AM</option>
+                                <option value="4AM">4:00 AM</option>
+                                <option value="5AM">5:00 AM</option>
+                                <option value="6AM">6:00 AM</option>
+                                <option value="7AM">7:00 AM</option>
+                                <option value="8AM">8:00 AM</option>
+                                <option value="9AM">9:00 AM</option>
+                                <option value="10AM">10:00 AM</option>
+                                <option value="11AM">11:00 AM</option>
+                                <option value="12PM">12:00 PM</option>
+                                <option value="1PM">1:00 PM</option>
+                                <option value="2PM">2:00 PM</option>
+                                <option value="3PM">3:00 PM</option>
+                                <option value="4PM">4:00 PM</option>
+                                <option value="5PM">5:00 PM</option>
+                                <option value="6PM">6:00 PM</option>
+                                <option value="7PM">7:00 PM</option>
+                                <option value="8PM">8:00 PM</option>
+                                <option value="9PM">9:00 PM</option>
+                                <option value="10PM">10:00 PM</option>
+                                <option value="11PM">11:00 PM</option>
+                                <option value="12AM">12:00 AM</option>
+                            </select>
+                            <br>
+                        <form>
+                            <label for="name5">Name: </label>
+                            <input type="text" id="name5" name="name5"><br><br>
+                            <button type="button" id="submit5" onClick="addtoCal5()">Submit</button>
+                        </form>
+                    </div>
+                    <div class="cal-grid-mar">
+                        <h4 class="Sunday">Sunday</h4>
+                        <h4 class="Monday">Monday</h4>
+                        <h4 class="Tuesday">Tuesday</h4>
+                        <h4 class="Wednesday">Wednesday</h4>
+                        <h4 class="Thursday">Thursday</h4>
+                        <h4 class="Friday">Friday</h4>
+                        <h4 class="Saturday">Saturday</h4>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div class="week1-grid">
+                            <h5 class="1">1</h5>
+                            <div id="Mar_1_2022" value="Mar_1_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid">
+                            <h5 class="2">2</h5>
+                            <div  id="Mar_2_2022" value="Mar_2_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid"> 
+                            <h5 class="3">3</h5>
+                            <div id="Mar_3_2022" value="Mar_3_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid"> 
+                            <h5 class="4">4</h5>
+                            <div id="Mar_4_2022" value="Mar_4_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid">
+                            <h5 class="5">5</h5>
+                            <div id="Mar_5_2022" value="Mar_5_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid">
+                            <h5 class="6">6</h5>
+                            <div id="Mar_6_2022" value="Mar_6_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid">
+                            <h5 class="7">7</h5>
+                            <div id="Mar_7_2022" value="Mar_7_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid">
+                            <h5 class="8">8</h5>
+                            <div id="Mar_8_2022" value="Mar_8_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="9">9</h5>
+                            <div id="Mar_9_2022" value="Mar_9_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="10">10</h5>
+                            <div id="Mar_10_2022" value="Mar_10_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="11">11</h5>
+                            <div id="Mar_11_2022" value="Mar_11_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="12">12</h5>
+                            <div id="Mar_12_2022" value="Mar_12_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="13">13</h5>
+                            <div id="Mar_13_2022" value="Mar_13_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="14">14</h5>
+                            <div id="Mar_14_2022" value="Mar_14_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="15">15</h5>
+                            <div id="Mar_15_2022" value="Mar_15_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="16">16</h5>
+                            <div id="Mar_16_2022" value="Mar_16_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="17">17</h5>
+                            <div id="Mar_17_2022" value="Mar_17_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="18">18</h5>
+                            <div id="Mar_18_2022" value="Mar_18_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="19">19</h5>
+                            <div id="Mar_19_2022" value="Mar_19_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="20">20</h5>
+                            <div id="Mar_20_2022" value="Mar_20_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="21">21</h5>
+                            <div id="Mar_21_2022" value="Mar_21_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="22">22</h5>
+                            <div id="Mar_22_2022" value="Mar_22_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week5-grid">
+                            <h5 class="23">23</h5>
+                            <div id="Mar_23_2022" value="Mar_23_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week5-grid">
+                            <h5 class="24">24</h5>
+                            <div id="Mar_24_2022" value="Mar_24_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week5-grid">
+                            <h5 class="25">25</h5>
+                            <div id="Mar_25_2022" value="Mar_25_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week5-grid">
+                            <h5 class="26">26</h5>
+                            <div id="Mar_26_2022" value="Mar_26_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week5-grid">
+                            <h5 class="27">27</h5>
+                            <div id="Mar_27_2022" value="Mar_27_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week5-grid">
+                            <h5 class="28">28</h5>
+                            <div id="Mar_28_2022" value="Mar_28_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week5-grid">
+                            <h5 class="29">29</h5>
+                            <div id="Mar_29_2022" value="Mar_29_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week5-grid">
+                            <h5 class="30">30</h5>
+                            <div id="Mar_30_2022" value="Mar_30_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week5-grid">
+                            <h5 class="31">31</h5>
+                            <div id="Mar_31_2022" value="Mar_31_2022" onclick="removeFromCal()"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slides">
+                <div class="monthwrapper">
+                    <h1>April</h1>
+                    <div class="event-options">
+                        <label class="listed-item" id="date6">Date: </label>
+                        <select name="date6" id="date-dropdown6" placeholder="Select Date">
+                            <option value="Apr_1_2022">Apr. 1 2022</option>
+                            <option value="Apr_2_2022">Apr. 2 2022</option>
+                            <option value="Apr_3_2022">Apr. 3 2022</option>
+                            <option value="Apr_4_2022">Apr. 4 2022</option>
+                            <option value="Apr_5_2022">Apr. 5 2022</option>
+                            <option value="Apr_6_2022">Apr. 6 2022</option>
+                            <option value="Apr_7_2022">Apr. 7 2022</option>
+                            <option value="Apr_8_2022">Apr. 8 2022</option>
+                            <option value="Apr_9_2022">Apr. 9 2022</option>
+                            <option value="Apr_10_2022">Apr. 10 2022</option>
+                            <option value="Apr_11_2022">Apr. 11 2022</option>
+                            <option value="Apr_12_2022">Apr. 12 2022</option>
+                            <option value="Apr_13_2022">Apr. 13 2022</option>
+                            <option value="Apr_14_2022">Apr. 14 2022</option>
+                            <option value="Apr_15_2022">Apr. 15 2022</option>
+                            <option value="Apr_16_2022">Apr. 16 2022</option>
+                            <option value="Apr_17_2022">Apr. 17 2022</option>
+                            <option value="Apr_18_2022">Apr. 18 2022</option>
+                            <option value="Apr_19_2022">Apr. 19 2022</option>
+                            <option value="Apr_20_2022">Apr. 20 2022</option>
+                            <option value="Apr_21_2022">Apr. 21 2022</option>
+                            <option value="Apr_22_2022">Apr. 22 2022</option>
+                            <option value="Apr_23_2022">Apr. 23 2022</option>
+                            <option value="Apr_24_2022">Apr. 24 2022</option>
+                            <option value="Apr_25_2022">Apr. 25 2022</option>
+                            <option value="Apr_26_2022">Apr. 26 2022</option>
+                            <option value="Apr_27_2022">Apr. 27 2022</option>
+                            <option value="Apr_28_2022">Apr. 28 2022</option>
+                            <option value="Apr_29_2022">Apr. 29 2022</option>
+                            <option value="Apr_30_2022">Apr. 30 2022</option>
+                        </select>
+        
+                        <label class="listed-item" id="time6">Time: </label>
+                           <select name="time6" id="time-dropdown6" placeholder="Select Time">
+                                <option value="1AM">1:00 AM</option>
+                                <option value="2AM">2:00 AM</option>
+                                <option value="3AM">3:00 AM</option>
+                                <option value="4AM">4:00 AM</option>
+                                <option value="5AM">5:00 AM</option>
+                                <option value="6AM">6:00 AM</option>
+                                <option value="7AM">7:00 AM</option>
+                                <option value="8AM">8:00 AM</option>
+                                <option value="9AM">9:00 AM</option>
+                                <option value="10AM">10:00 AM</option>
+                                <option value="11AM">11:00 AM</option>
+                                <option value="12PM">12:00 PM</option>
+                                <option value="1PM">1:00 PM</option>
+                                <option value="2PM">2:00 PM</option>
+                                <option value="3PM">3:00 PM</option>
+                                <option value="4PM">4:00 PM</option>
+                                <option value="5PM">5:00 PM</option>
+                                <option value="6PM">6:00 PM</option>
+                                <option value="7PM">7:00 PM</option>
+                                <option value="8PM">8:00 PM</option>
+                                <option value="9PM">9:00 PM</option>
+                                <option value="10PM">10:00 PM</option>
+                                <option value="11PM">11:00 PM</option>
+                                <option value="12AM">12:00 AM</option>
+                            </select>
+                            <br>
+                        <form>
+                            <label for="name6">Name: </label>
+                            <input type="text" id="name6" name="name6"><br><br>
+                            <button type="button" id="submit6" onClick="addtoCal6()">Submit</button>
+                        </form>
+                    </div>
+                    <div class="cal-grid-apr">
+                        <h4 class="Sunday">Sunday</h4>
+                        <h4 class="Monday">Monday</h4>
+                        <h4 class="Tuesday">Tuesday</h4>
+                        <h4 class="Wednesday">Wednesday</h4>
+                        <h4 class="Thursday">Thursday</h4>
+                        <h4 class="Friday">Friday</h4>
+                        <h4 class="Saturday">Saturday</h4>
+                        <div></div>
+                        <div></div>
+                        <div class="week1-grid">
+                            <h5 class="1">1</h5>
+                            <div id="Apr_1_2022" value="Apr_1_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week1-grid">
+                            <h5 class="2">2</h5>
+                            <div  id="Apr_2_2022" value="Apr_2_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid"> 
+                            <h5 class="3">3</h5>
+                            <div id="Apr_3_2022" value="Apr_3_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid"> 
+                            <h5 class="4">4</h5>
+                            <div id="Apr_4_2022" value="Apr_4_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid">
+                            <h5 class="5">5</h5>
+                            <div id="Apr_5_2022" value="Apr_5_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid">
+                            <h5 class="6">6</h5>
+                            <div id="Apr_6_2022" value="Apr_6_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid">
+                            <h5 class="7">7</h5>
+                            <div id="Apr_7_2022" value="Apr_7_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid">
+                            <h5 class="8">8</h5>
+                            <div id="Apr_8_2022" value="Apr_8_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week2-grid">
+                            <h5 class="9">9</h5>
+                            <div id="Apr_9_2022" value="Apr_9_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="10">10</h5>
+                            <div id="Apr_10_2022" value="Apr_10_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="11">11</h5>
+                            <div id="Apr_11_2022" value="Apr_11_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="12">12</h5>
+                            <div id="Apr_12_2022" value="Apr_12_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="13">13</h5>
+                            <div id="Apr_13_2022" value="Apr_13_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="14">14</h5>
+                            <div id="Apr_14_2022" value="Apr_14_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="15">15</h5>
+                            <div id="Apr_15_2022" value="Apr_15_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week3-grid">
+                            <h5 class="16">16</h5>
+                            <div id="Apr_16_2022" value="Apr_16_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="17">17</h5>
+                            <div id="Apr_17_2022" value="Apr_17_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="18">18</h5>
+                            <div id="Apr_18_2022" value="Apr_18_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="19">19</h5>
+                            <div id="Apr_19_2022" value="Apr_19_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="20">20</h5>
+                            <div id="Apr_20_2022" value="Apr_20_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="21">21</h5>
+                            <div id="Apr_21_2022" value="Apr_21_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="22">22</h5>
+                            <div id="Apr_22_2022" value="Apr_22_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="23">23</h5>
+                            <div id="Apr_23_2022" value="Apr_23_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="24">24</h5>
+                            <div id="Apr_24_2022" value="Apr_24_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="25">25</h5>
+                            <div id="Apr_25_2022" value="Apr_25_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="26">26</h5>
+                            <div id="Apr_26_2022" value="Apr_26_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="27">27</h5>
+                            <div id="Apr_27_2022" value="Apr_27_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="28">28</h5>
+                            <div id="Apr_28_2022" value="Apr_28_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="29">29</h5>
+                            <div id="Apr_29_2022" value="Apr_29_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div class="week4-grid">
+                            <h5 class="30">30</h5>
+                            <div id="Apr_30_2022" value="Apr_30_2022" onclick="removeFromCal()"></div>
+                        </div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="main.js"></script>
+</html>
